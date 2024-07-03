@@ -5,23 +5,10 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 from tensorflow.keras.callbacks import TensorBoard, ModelCheckpoint
 import matplotlib.pyplot as plt
 
-from util.const import BATCH_SIZE, IMAGE_SHAPE
+from util.const import ACTIVATION_OUTPUT, BATCH_SIZE, CONV_LAYER_PARAMS, DENSE_LAYER_SIZE, EPOCHS, IMAGE_SHAPE, LOG_DIR, LOSS_FUNCTION, METRICS, NUM_CLASSES, OPTIMIZER
 from util.save_model import get_weight_callback
 
-# Constants
-NUM_CLASSES = 3
-CONV_LAYER_PARAMS = [
-    {'filters': 16, 'kernel_size': (3, 3), 'activation': 'relu'},
-    {'filters': 16, 'kernel_size': (3, 3), 'activation': 'relu'},
-    {'filters': 16, 'kernel_size': (3, 3), 'activation': 'relu'}
-]
-DENSE_LAYER_SIZE = 256
-ACTIVATION_OUTPUT = 'sigmoid'
-LOSS_FUNCTION = tf.keras.losses.BinaryCrossentropy()
-OPTIMIZER = 'adam'
-METRICS = ['accuracy']
-LOG_DIR = 'logs'
-EPOCHS = 20
+
 
 def train_model(X_train, Y_train):
     # Data preprocessing
