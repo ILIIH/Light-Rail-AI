@@ -1,0 +1,4 @@
+dataset/*
+logs/*
+training_2/*
+*.weights.h5
