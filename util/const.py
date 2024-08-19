@@ -9,7 +9,7 @@ NUM_CLASSES = 3
 CONV_LAYER_PARAMS = [
     {'filters': 16, 'kernel_size': (3, 3), 'activation': 'relu'},
     {'filters': 16, 'kernel_size': (3, 3), 'activation': 'relu'},
-    {'filters': 16, 'kernel_size': (3, 3), 'activation': 'reslu'}
+    {'filters': 16, 'kernel_size': (3, 3), 'activation': 'relu'}
 ]
 DENSE_LAYER_SIZE = 256
 ACTIVATION_OUTPUT = 'sigmoid'
@@ -17,7 +17,7 @@ LOSS_FUNCTION = tf.keras.losses.BinaryCrossentropy()
 OPTIMIZER = 'adam'
 METRICS = ['accuracy']
 LOG_DIR = 'logs'
-EPOCHS = 20
+EPOCHS = 10
 
 IMAGE_SHAPE = (333, 500, 3)
-BATCH_SIZE =32
+BATCH_SIZE =16

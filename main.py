@@ -20,6 +20,8 @@ def train(dataset):
     Y_train = train_set.values  
 
     model = train_model(X_train, Y_train)    
+    print("MODEL FULLY TRAINED")
+    model.save(CHECKPOINT_DIR, save_format='tf')
     save_model(model)
 
 def main():
